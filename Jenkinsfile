@@ -10,7 +10,7 @@ pipeline {
 
         stage('Compile Arduino Sketch') {
             steps {
-                bat 'arduino-cli compile --fqbn arduino:avr:uno MyProject'
+                bat '"C:\Users\vigne\Downloads\arduino-cli_1.2.0_Windows_64bit\arduino-cli.exe" compile --fqbn arduino:avr:uno MyProject'
             }
         }
 
@@ -19,7 +19,7 @@ pipeline {
                 bat '''
                     echo "Skipping upload step since it's optional"
                     rem Uncomment the next line if you want to upload to a real Arduino board
-                    rem arduino-cli upload -p COM3 --fqbn arduino:avr:uno MyProject
+                    rem "C:\\Users\\vigne\\Downloads\\arduino-cli_1.2.0_Windows_64bit\\arduino-cli.exe" upload -p COM3 --fqbn arduino:avr:uno MyProject
                 '''
             }
         }
