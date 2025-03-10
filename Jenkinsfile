@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/VigneshAravindh/arduino_ci_cd.git'
+                git url: 'https://github.com/VigneshAravindh/arduino_ci_cd.git', branch: 'main'
             }
         }
 
