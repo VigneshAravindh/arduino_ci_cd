@@ -19,7 +19,7 @@ pipeline {
         stage('Upload to Arduino (Optional)') {
             steps {
                 script {
-                    // Uncomment if using a real board
+                    // Uncomment if using a real Arduino board
                     // sh 'arduino-cli upload -p COM3 --fqbn arduino:avr:uno MyProject'
                 }
             }
