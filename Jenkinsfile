@@ -30,8 +30,8 @@ pipeline {
                     git config --global user.email "vigneshjan03@gmail.com"
                     git config --global user.name "Vignesh Aravindh"
                     git add .
-                    git commit -m "Automated build from Jenkins" || echo "No changes to commit"
-                    git push origin main || echo "No changes to push"
+                    git commit -m "Fixed missing MyProject folder"
+                    git push origin main
                 '''
             }
         }
