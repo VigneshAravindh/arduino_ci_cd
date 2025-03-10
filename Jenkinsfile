@@ -10,7 +10,7 @@ pipeline {
 
         stage('Compile Arduino Sketch') {
             steps {
-                bat '"C:\Users\vigne\Downloads\arduino-cli_1.2.0_Windows_64bit\arduino-cli.exe" compile --fqbn arduino:avr:uno MyProject'
+                bat "\"C:\\Users\\vigne\\Downloads\\arduino-cli_1.2.0_Windows_64bit\\arduino-cli.exe\" compile --fqbn arduino:avr:uno MyProject"
             }
         }
 
