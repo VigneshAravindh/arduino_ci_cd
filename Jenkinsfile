@@ -16,14 +16,19 @@ pipeline {
 
         stage('Upload to Arduino (Optional)') {
             steps {
-                // Uncomment if using a real Arduino board
-                // sh 'arduino-cli upload -p COM3 --fqbn arduino:avr:uno MyProject'
+                sh '''
+                    echo "Skipping upload step since it's optional"
+                    # Uncomment the next line if you want to upload to a real Arduino board
+                    # arduino-cli upload -p COM3 --fqbn arduino:avr:uno MyProject
+                '''
             }
         }
 
         stage('Push to GitHub') {
             steps {
                 sh '''
+                    git config --global user.email "vigneshjan03@gmail.com"
+                    git config --global user.name "Vignesh Aravindh"
                     git add .
                     git commit -m "Automated build from Jenkins" || echo "No changes to commit"
                     git push origin main || echo "No changes to push"
